@@ -80,6 +80,7 @@ fgrep -Rn do_action\(\ \'admin_notices\'\ \) *
 
 wp-includes/plugin.php
 
+ | 
 -----|-----
 add\_action() | add\_filter() 
 has\_action() | has\_filter() 
