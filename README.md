@@ -69,24 +69,21 @@ using ssh.
 
 A hook means an event.
 
-admin notices codex 
+admin notices codex  
 admin head codex
 
 ```shell
-fgrep -Rn do\_action\(\ \'admin\_notices\'\ \) *
+fgrep -Rn do_action\(\ \'admin_notices\'\ \) *
 ```
 
 ### Hook interface
 
 wp-includes/plugin.php
 
-add\_action() 
-has\_action() 
-do\_action() 
-
-add\_filter() 
-has\_filter() 
-apply\_filters() 
+-----|-----
+add\_action() | add\_filter() 
+has\_action() | has\_filter() 
+do\_action() | apply\_filters()
 
 themes : visual part  
 plugins : functional part
@@ -112,7 +109,7 @@ No restriction, you can define your own hook.
 ### database description
 
 parent - meta styles  
-reference - codex.wordpress.org
+reference - [codex.wordpress.org/Database\_Description](https://codex.wordpress.org/Database_Description)
 
 ### meta table
 
@@ -146,7 +143,7 @@ taxonomy can be flat or hierarchical.
 term\_taxonomy : taxonomy - term  
 term\_ralationship : post - taxonomy
 
-### homework
+### Try it
 
 업무 일지 플러그인
  - 일일 업무를 워드프레스에서 관리
