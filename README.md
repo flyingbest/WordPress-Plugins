@@ -81,14 +81,17 @@ Very important!!! **Basic concepts!**
 
 ### Hooks in Nutshell
 
-A hook means an event.
+Hook-driven programming. A hook means an event.
 
-admin notices codex  
-admin head codex
+- Hello dolly's case :  
+ [admin notices codex](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices)  
+ [admin head codex](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head)  
 
-```shell
-fgrep -Rn do_action\(\ \'admin_notices\'\ \) *
-```
+ Find them in the source codes. with following instructions :  
+ ```shell
+ $ fgrep -Rn do_action\(\ \'admin_notices\'\ \) *
+ $ fgrep -Rn do_action\(\ \'admin_head\'\ \) *
+ ```
 
 ### Hook interface
 
@@ -100,17 +103,27 @@ add\_action() | add\_filter()
 has\_action() | has\_filter() 
 do\_action() | apply\_filters()
 
-themes : visual part  
-plugins : functional part
+- TaskdSeparation  
+ themes : visual part  
+ plugins : functional part  
 
-action - structural part  
-filter - information part
+ action - structural part  
+ filter - information part  
 
-add\_action == add\_filter
+```php
+$ cat wp-includes/plugin.php
+...
+function add_action($tag, $function_to_add, $priority = 10, $accepted_args = 1){
+	return add_filter($tag, $function_to_add, $priority, $accepted_args);
+}
+...
+```
+
+As a result, add\_action == add\_filters
 
 add\_action() is mere an alias of add\_filter()
 why add\_action() is created?
-*because they want to maintain detailed conception.*
+**because they want to maintain detailed conception.**
 
 ### do\_action, add\_action feedback
 
@@ -121,16 +134,26 @@ No restriction, you can define your own hook.
 
 ### call\_user\_finc
 
+PHP function for callback. Formats of input, and output are already defined. But their processes are not clear. Check call back function like this :  
+
+```bash
+$ php hello-taeyoon.php
+Hello, taeyoon!
+Hello, callback!
+Hello, World!
+```
+
 ### database description
 
-parent - meta styles  
 reference - [codex.wordpress.org/Database\_Description](https://codex.wordpress.org/Database_Description)
 
 ### meta table
 
+Every \*meta table has meta\_key, meta\_value. closely related to 'hashing'.
+
 ### Hashing
 
-key - value pair.
+key - value pair. key is short / value is often long.
 
 ### Terms and Taxonomies
 
@@ -138,6 +161,10 @@ Terms : a word.
 Taxonomies : ex) home appliance, metal, iron man.
 
 ### Adding Terms in Posts
+
+A Post has basically two taxonomies:  
+ - tags  
+ - categories  
 
 Adding tag/category == adding terms
 
@@ -156,7 +183,7 @@ you can add taxonomies (as well as trems)
 taxonomy can be flat or hierarchical.  
 
 term\_taxonomy : taxonomy - term  
-term\_ralationship : post - taxonomy
+term\_ralationship : posts - taxonomy
 
 ### Try it
 
