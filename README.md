@@ -155,3 +155,70 @@ term\_ralationship : post - taxonomy
  - 회원이 예약
  - 도서 대출 및 확인
 
+### Helpful Site
+
+This is helpful site. Referenced.
+
+[Plugin Handbook](https://developer.wordpress.org/plugins/).
+
+## '#3
+
+### Recap
+
+Hooks in Nutshell  
+ - hook is an event  
+ - Plugin is hook-driven  
+ - Task separation. (action, filter)  
+ - Callback function utility  
+ - you can define your own hooks  
+
+Database Nutshell  
+ - Parent-meta strategy. ( meta key, meta-value )  
+ - Term, taxonomy. (category, tag)  
+
+[**Slides Repository**](http://blog.changwoo.pe.kr/wordpress-plugin-development/)
+
+### Entry Points
+
+Server only responds when it is requested. (- url)
+
+1. Menu Items  
+ add\_menu\_page()  
+ add\_submenu\_page()  
+
+ It a CMS. Not a management.
+
+ Where is dafault menu? 
+ ```bash
+ $ pwd
+ wp-admin/menu-header.php
+ ```
+
+2. Shortcodes  
+ callback params: ($attrs, $content, $tag).
+
+3. Admin-post  
+
+4. AJAX  
+
+5. Redirect  
+
+6. (de)activation, uninstall  
+
+test url - http://192.168.30.8/?page\_id=1120&rocket=taeyoon
+
+### Custom Post
+
+classification, reuse
+
+next time : study deep inside about custom post. 
+
+if you have time : blog -> wordpress development -> read about custom post parameter..
+
+## '#4
+
+###
+
+## '#5
+
+###
