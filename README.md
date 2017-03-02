@@ -249,7 +249,12 @@ Server only responds when it is requested. (- url) Requested moment -> entry poi
 
 ### Training URL 
 
-(ip)/&rocket=taeyoon
+Post title : Entry point testing  
+Post content : [taeyoon\_shortcode]  
+
+Entering URL :  
+ 1. Permalink  
+ 2. (ip)/?&rocket=taeyoon
 
 ### Custom Post
 

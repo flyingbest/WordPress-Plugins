@@ -85,6 +85,7 @@ function taeyoon_entry_points_ajax_action_callback() {
   die();
 }
 
+// redirect
 add_action( 'template_redirect', 'taeyoon_entry_points_redirect_callback' );
 
 function taeyoon_entry_points_redirect_callback() {
@@ -95,6 +96,7 @@ function taeyoon_entry_points_redirect_callback() {
   }
 }
 
+// shortcode
 add_shortcode( 'taeyoon_shortcode', 'taeyoon_shortcode_callback' );
 
 function taeyoon_shortcode_callback() {
