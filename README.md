@@ -217,15 +217,15 @@ Database Nutshell
  - Parent-meta strategy. ( meta key, meta-value )  
  - Term, taxonomy. (category, tag)  
 
-[**Slides Repository**](http://blog.changwoo.pe.kr/wordpress-plugin-development/)
+Here is a [**Slides Repository**](http://blog.changwoo.pe.kr/wordpress-plugin-development/).
 
 ### Entry Points
 
-Server only responds when it is requested. (- url)
+Server only responds when it is requested. (- url) Requested moment -> entry point.
 
 1. Menu Items  
- add\_menu\_page()  
- add\_submenu\_page()  
+ add\_menu\_page(), add\_submenu\_page()  
+ remove\_menu\_page(), remove\_submenu\_page()  
 
  It a CMS. Not a management.
 
@@ -236,6 +236,7 @@ Server only responds when it is requested. (- url)
  ```
 
 2. Shortcodes  
+ A *magic word* in post content that is replaced by some process defined in plugin or themes in runtime.  
  callback params: ($attrs, $content, $tag).
 
 3. Admin-post  
@@ -246,7 +247,9 @@ Server only responds when it is requested. (- url)
 
 6. (de)activation, uninstall  
 
-test url - http://192.168.30.8/?page\_id=1120&rocket=taeyoon
+### Training URL 
+
+(ip)/&rocket=taeyoon
 
 ### Custom Post
 
