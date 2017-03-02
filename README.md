@@ -36,20 +36,38 @@ Plugins extend WordPress. threr is a 'protocol'. **Imagine the protocol.** Wordp
 
 In practice examples :
 
-```
-function(){
-	echo
-}  // this is callback function.
+```c
+#include <stdio.h>
+
+void A(){
+	printf("Hello!\n");
+}
+
+void B(void (*ptr) ()){	//function pointer as argument
+	ptr();	//call-back function that "ptr" point to
+}
+
+int main(){
+	//void (*p)() = A;
+	//B(p);
+	B(A);	//A is callback function.
+	return 0;
+}
 ```
 
 > A callback is any executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at a given time. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback. 
 > \- Referenced by wikipedia.  
 
-### Environments
+### Training dir/files
+ 
+Basic plugin pwd :
 
-rocketeer 5G 192.168.1.22
-<!-- wordpress / 1 -->
-taeyoon-hello-world.php
+```bash
+$ pwd
+/var/www/html/wp-content/plugins/
+```
+
+01\_hello-world/taeyoon-hello-world.php
 
 ### GOAL!
 
@@ -59,11 +77,7 @@ taeyoon-hello-world.php
 
 Very important!!! **Basic concepts!**
 
-### Environments
-
-using ssh.  
-<!-- wordpress / 1 -->  
-/var/www/wordpress/wp-content/plugins/call\_user\_func
+### Training dir/files
 
 ### Hooks in Nutshell
 
