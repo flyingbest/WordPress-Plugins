@@ -266,7 +266,38 @@ if you have time : blog -> wordpress development -> read about custom post param
 
 ## '#4
 
-###
+### Custom Post
+
+Read this [Blog Post](http://blog.changwoo.pe.kr/%ED%8A%B9%EC%A0%95-%ED%8F%AC%EC%8A%A4%ED%8A%B8%EC%9D%98-%EA%B6%8C%ED%95%9C%EC%9D%84-%EC%A0%9C%EC%96%B4%ED%95%98%EB%8A%94-%EB%A0%88%EC%8B%9C%ED%94%BC/).
+
+### Practice Custom post
+
+Create custom-post-taeyoon.php
+
+### Roles & Capability
+
+실습하면서 wordpress admin 계정에 들어가서 할 수 있는거.
+
+capability, capability의 preset은 롤이라고 한다.
+
+어드민 화면에서 user 에 들어가서 확인
+
+주 카파빌리티
+ - 항상 그때 그 권한으로 잡혀있는거
+
+메다 카파빌리티
+ - 상황에 따라 바뀔 수 있는 카파빌리티. 
+ - 문맥에 따라 주 카파빌리티로도 대응이 됨.
+
+wp-include/capability.php - map\_meta\_cap 으로 대응하는 함수.
+부작용을 막는거 edit\_post, edit\_page
+리비전한 포스트, 찌꺼기로 남아있는데 누출될 수 있어 허용 안한다.
+
+내가 쓴 글이면
+휴지통에 있는거를 접근했으면
+결국, 문맥에 따라 어떤거인지 따지는것 
+
+ex) 포스트A, B 예를 들어서 설명. 이해함.
 
 ## '#5
 
