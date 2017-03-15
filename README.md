@@ -318,4 +318,10 @@ This post A and B are POST. So, we need to more specific capabilities. That's wh
 
 ## '#5
 
-###
+### Recap
+
+### 
+
+nonce - wordpress protection.  
+checking wordpress form.
+
