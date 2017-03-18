@@ -320,8 +320,8 @@ This post A and B are POST. So, we need to more specific capabilities. That's wh
 
 ### Recap
 
-### 
+### Finish
 
 nonce - wordpress protection.  
-checking wordpress form.
+when protect from something, nonce can checking it as wordpress form.  
 
